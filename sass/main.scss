@@ -1,1 +1,860 @@
-@import 'base/fonts'
+@import 'base/fonts';
+@import 'utils/variables';
+@import 'base/basis';
+
+
+
+
+
+
+
+
+/* Навигация*/
+
+
+.header__container {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.header__nav,
+.header__list {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $title-text-color;
+    width: 145px;
+    height: 31px;
+
+    letter-spacing: 0.03em;
+    margin-right: 93px;
+}
+
+.logo__text {
+    color: $accent-color;
+}
+
+.header__portfolio {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header__contact {
+    margin-left: auto;
+}
+
+.header__item-contact{
+    margin-right: 30px;
+}
+
+.header__page {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color $animation-duration $animation-timing;
+
+    color: $title-text-color;
+
+}
+
+.header__page:hover,
+.header__page:focus {
+    color: $accent-color;
+    
+}
+
+.header__page--active{
+    color: $accent-color;
+}
+
+.header__page--active::after{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -0.5px;
+
+    background-color: $accent-color;
+}
+
+.header__page--contact {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    color: $main-text-color;
+}
+
+.header__icon{
+    width: 16px;
+    margin-right: 10px;
+    
+    fill: currentColor
+}
+
+/* герой */
+
+.hero__section{
+    text-align: center;  
+}
+
+.hero__overlay{
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 200px;
+    background-color: #C4C4C4;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__title{
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.37;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+    text-transform: uppercase;
+    
+    color: $main-white-color;
+}
+
+.hero__button{
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    padding: 10px 32px;
+    margin-top: 30px;
+    border: 0;
+    cursor: pointer;
+
+    color: $main-white-color;
+}
+
+/* особенности */
+
+.features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.features__title{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.features__list{
+    display: flex;
+}
+
+.features__item:not(:last-child){
+    margin-right: 30px;
+}
+
+.features__item {
+    width: 270px;
+}
+
+.features__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: $background-icon;
+    margin-bottom: 30px;
+    border-radius: 4px;    
+}
+
+.features__item-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    color: $title-text-color;
+    
+}
+
+.features__item-text{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $main-text-color;
+}
+
+.icon{
+    width: 70px;
+    height: 70px;
+}
+
+/* Работа*/
+
+.work {
+    padding-bottom: 94px;
+}
+
+.work__list{
+    display: flex;
+}
+
+.work__item:not(:last-child){
+    margin-right: 30px;
+}
+
+.work__list{
+    position: relative;
+}
+
+
+
+.work__text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 27px 82px;
+    margin: 0;
+    width: 370px;
+    
+    color: $main-white-color;
+    background: rgba(47, 48, 58, 0.8);
+
+    position: absolute;
+    bottom: 0;
+}
+
+/* команда */
+
+.team{
+    background-color: #F5F4FA;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team__list {
+    display: flex;
+
+}
+
+.team__item {
+    background-color: $main-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team__item:not(:last-child){
+    margin-right: 30px;
+}
+
+
+.team__item-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    color: $title-text-color;
+}
+
+.team__item-text{
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $main-text-color;
+}
+
+/* соц. сети*/
+
+.social{
+    display: flex;
+    padding: 16px 32px 30px;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.social__item{
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__link{
+    padding: 12px;
+    border-radius: 50px;
+    color: $color-icon;
+    transition-property: color, background-color $animation-duration $animation-timing;
+}
+
+.social__link:hover,
+.social__link:focus {
+    color: $main-white-color;
+    background-color: $accent-color;
+    
+}
+
+.social__footer-link{
+    color: $main-white-color;
+}
+
+.social__img{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/*Наши клиенты*/
+
+.client{
+    padding: 94px 0;
+}
+
+.client__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.client__item{
+   
+    width: 170px;
+    height: 90px;
+}
+
+.client__link{
+    border: 1px solid $color-icon;
+    color: $color-icon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: color, border-color $animation-duration $animation-timing;
+}
+
+.client__link:hover,
+.client__link:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+}
+
+.client__icon{
+    fill: currentColor;
+}
+
+
+
+.client__link--ya-co{
+    padding: 20px 63px;
+}
+
+.client__link--tag-line{
+    padding: 19px 65px;
+}
+
+.client__link--company{
+    padding: 24px 65px;
+}
+
+.client__link--foster-peters{
+    padding: 24px 45px;
+}
+
+.client__link--brand{
+    padding: 22px 56px;
+}
+
+.client__link--teg-company{
+    padding: 22px 41px;
+}
+
+/* адресс */
+
+.footer{
+    background-color: $address-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__footer-logo{
+    color: $main-white-color;
+    margin: 0;
+}
+
+.footer__address-office{
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    padding-top: 20px;
+
+    color: $main-white-color;
+}
+
+.footer__address-contact{
+    padding-top: 9px;
+}
+
+.footer__address-contact a{
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__social{
+    padding-top: 10px;
+    padding-left: 70px;
+}
+
+.footer__title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    color: $main-white-color;
+}
+
+.footer__sub{
+    padding-top: 10px;
+    padding-left: 93px;
+}
+
+.footer__input{
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__button{
+    width: 200px;
+    background-color: $accent-color;
+    border: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 28px;
+    margin-left: 12px;
+}
+
+.footer__button-send{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: $main-white-color;
+}
+
+.footer__send-icon{
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+/* портфолио*/
+
+/*кнопки*/
+
+.project {
+    padding-top: 100px;
+    padding-bottom: 94px;
+ }
+   
+ .filter {
+     display: flex;
+     justify-content: center;
+     margin-bottom: 50px;
+ }
+ 
+ .filter__item:not(:last-child) {
+     margin-right: 8px;
+ }
+ 
+
+.filter__button{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+
+    background: #F5F4FA;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px 22px;
+    transition: color, background-color, box-shadow $animation-duration $animation-timing;
+    color:$title-text-color;
+}
+
+.filter__button:hover,
+.filter__button:focus{
+    background-color: $accent-color;
+    color: $main-white-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter__button:active{
+    color: $main-white-color;
+    background-color: $accent-color
+}
+
+/*проекты*/
+
+.card__list {
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+
+.card__item {
+    margin-right: 30px;
+    margin-bottom: 30px;  
+}
+
+.card__item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.card__item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+}
+
+.card__link{
+    transition: box-shadow $animation-duration $animation-timing;
+}
+
+.card__link:hover,
+.card__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);   
+}
+.card__img{
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img--overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform $animation-duration $animation-timing;
+}
+
+.card__img--overlay-text{
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.card__link:hover .card__img--overlay,
+.card__link:focus .card__img--overlay{
+    transform: translateY(0);
+}
+
+.card__title{
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card__item-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.00;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+    
+
+    color: $title-text-color;
+}
+
+.card__item-text{
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+
+    color: $main-text-color;
+}
+
+/* модалка*/
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop__is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+
+    background-color: $main-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.modal__close{
+    position: absolute;
+    
+    top: 8px;
+    right: 8px;
+
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    color: #000000;
+}
+
+.modal__close:hover,
+.modal__close:focus{
+    /*background-color: $accent-color;*/
+    color: $accent-color;
+}
+
+.modal__img{
+    width: 30px;
+    height: 30px;
+
+    fill: currentColor;
+}
+
+.modal__title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+
+    color: $title-text-color;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form__text{
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+
+    color: $main-text-color;
+}
+
+.form__field{
+    position: relative;
+    border-radius: 4px;
+}
+
+.form__input{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    padding: 11px 12px;
+    padding-left: 42px;
+    transition: border-color $animation-duration $animation-timing;
+}
+.form__input:hover,
+.form__input:focus{
+    border-color: $accent-color;
+    color: $accent-color;
+    outline: none;
+}
+
+.form__input:hover + .form__img,
+.form__input:focus + .form__img{
+    color: $accent-color;
+}
+
+.form__img{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    
+    fill: currentColor;
+}
+
+.form--comment{
+    margin-bottom: 20px;
+}
+
+.form__textarea{
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    margin: 0;
+    transition: border-color $animation-duration $animation-timing;
+}
+
+.form__textarea:focus,
+.form__textarea:hover{
+    border-color: $accent-color;
+}
+
+.form__contract{
+    position: relative;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 30px;
+}
+
+.form__old-checkbox{
+    margin-right: 7px;
+
+    opacity: 0;
+}
+
+.form__contract-text{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $main-text-color;
+}
+.form__contract-link{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-left: 3px;
+
+    color: $accent-color;
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+}
+
+.form__contract label::before{
+    position: absolute;
+    display: inline-flex;
+    content: "";
+    width: 16px;
+    height: 15px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    border: 1px solid $title-text-color;
+    border-radius: 2px;
+    transition: background-color $animation-duration $animation-timing;
+}
+.form__contract input[type="checkbox"]:hover + label::before,
+.form__contract input[type="checkbox"]:focus + label::before{
+    border: 1px solid $accent-color;
+}
+
+.form__contract input[type="checkbox"]:checked + label::before{
+    background-color: $accent-color;
+    background-image: url(../img/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: transparent;
+}
+
+.form__button{
+    padding: 10px 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border: 0;
+    background-color: $accent-color;
+    margin: auto;
+
+    color:$main-white-color;
+    cursor: pointer;
+}

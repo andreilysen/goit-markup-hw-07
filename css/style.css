@@ -1,48 +1,3 @@
-:root {
-    --title-text-color: #212121;
-    --main-text-color: #757575;
-    --accent-color:  #2196F3;
-    --main-white-color: #FFFFFF;
-    --address-color: #2F303A;
-    --background-icon: #F5F4FA;
-    --color-icon: #AFB1B8;
-    --animation-duration: 250ms;
-    --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body {
-    font-family: Roboto, sans-serif;
-
-    background-color: var(--main-white-color);
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-button {
-    font-family: inherit;
-}
-
-ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-}
-
-h1,
-h2,
-h3,
-p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -55,7 +10,7 @@ p {
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: var(--title-text-color);
+    color: $title-text-color;
 
     padding-bottom: 50px;
 }
@@ -85,7 +40,7 @@ p {
     font-family: Raleway, sans-serif;
     font-size: 26px;
     line-height: 1.19;
-    color: var(--title-text-color);
+    color: $title-text-color;
     width: 145px;
     height: 31px;
 
@@ -94,7 +49,7 @@ p {
 }
 
 .logo__text {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .header__portfolio {
@@ -121,20 +76,20 @@ p {
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: color var(--animation-duration) var(--animation-timing);
+    transition: color $animation-duration $animation-timing;
 
-    color: var(--title-text-color);
+    color: $title-text-color;
 
 }
 
 .header__page:hover,
 .header__page:focus {
-    color: var(--accent-color);
+    color: $accent-color;
     
 }
 
 .header__page--active{
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .header__page--active::after{
@@ -146,7 +101,7 @@ p {
     border-radius: 2px;
     bottom: -0.5px;
 
-    background-color: var(--accent-color);
+    background-color: $accent-color;
 }
 
 .header__page--contact {
@@ -154,7 +109,7 @@ p {
     align-items: center;
     padding: 0;
 
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 
 .header__icon{
@@ -191,7 +146,7 @@ p {
     margin: 0 auto;
     text-transform: uppercase;
     
-    color: var(--main-white-color);
+    color: $main-white-color;
 }
 
 .hero__button{
@@ -205,7 +160,7 @@ p {
     border: 0;
     cursor: pointer;
 
-    color: var(--main-white-color);
+    color: $main-white-color;
 }
 
 /* особенности */
@@ -240,7 +195,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 120px;
-    background-color: var(--background-icon);
+    background-color: $background-icon;
     margin-bottom: 30px;
     border-radius: 4px;    
 }
@@ -253,7 +208,7 @@ p {
     text-transform: uppercase;
     padding-bottom: 10px;
 
-    color: var(--title-text-color);
+    color: $title-text-color;
     
 }
 
@@ -262,7 +217,7 @@ p {
     line-height: 1.71;
     letter-spacing: 0.03em;
 
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 
 .icon{
@@ -301,7 +256,7 @@ p {
     margin: 0;
     width: 370px;
     
-    color: var(--main-white-color);
+    color: $main-white-color;
     background: rgba(47, 48, 58, 0.8);
 
     position: absolute;
@@ -322,7 +277,7 @@ p {
 }
 
 .team__item {
-    background-color: var(--main-white-color);
+    background-color: $main-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -341,7 +296,7 @@ p {
     padding-top: 30px;
     padding-bottom: 10px;
 
-    color: var(--title-text-color);
+    color: $title-text-color;
 }
 
 .team__item-text{
@@ -350,7 +305,7 @@ p {
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 
 /* соц. сети*/
@@ -374,19 +329,19 @@ p {
 .social__link{
     padding: 12px;
     border-radius: 50px;
-    color: var(--color-icon);
-    transition-property: color, background-color var(--animation-duration) var(--animation-timing);
+    color: $color-icon;
+    transition-property: color, background-color $animation-duration $animation-timing;
 }
 
 .social__link:hover,
 .social__link:focus {
-    color: var(--main-white-color);
-    background-color: var(--accent-color);
+    color: $main-white-color;
+    background-color: $accent-color;
     
 }
 
 .social__footer-link{
-    color: var(--main-white-color);
+    color: $main-white-color;
 }
 
 .social__img{
@@ -413,18 +368,18 @@ p {
 }
 
 .client__link{
-    border: 1px solid var(--color-icon);
-    color: var(--color-icon);
+    border: 1px solid $color-icon;
+    color: $color-icon;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-property: color, border-color var(--animation-duration) var(--animation-timing);
+    transition-property: color, border-color $animation-duration $animation-timing;
 }
 
 .client__link:hover,
 .client__link:focus {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+    color: $accent-color;
+    border-color: $accent-color;
 }
 
 .client__icon{
@@ -460,7 +415,7 @@ p {
 /* адресс */
 
 .footer{
-    background-color: var(--address-color);
+    background-color: $address-color;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -471,7 +426,7 @@ p {
 }
 
 .logo__footer-logo{
-    color: var(--main-white-color);
+    color: $main-white-color;
     margin: 0;
 }
 
@@ -482,7 +437,7 @@ p {
     letter-spacing: 0.03em;
     padding-top: 20px;
 
-    color: var(--main-white-color);
+    color: $main-white-color;
 }
 
 .footer__address-contact{
@@ -511,7 +466,7 @@ p {
     text-transform: uppercase;
     margin-bottom: 20px;
 
-    color: var(--main-white-color);
+    color: $main-white-color;
 }
 
 .footer__sub{
@@ -533,7 +488,7 @@ p {
 
 .footer__button{
     width: 200px;
-    background-color: var(--accent-color);
+    background-color: $accent-color;
     border: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -550,7 +505,7 @@ p {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    color: var(--main-white-color);
+    color: $main-white-color;
 }
 
 .footer__send-icon{
@@ -591,20 +546,20 @@ p {
     border: 0;
     border-radius: 4px;
     padding: 6px 22px;
-    transition: color, background-color, box-shadow var(--animation-duration) var(--animation-timing);
-    color:var(--title-text-color);
+    transition: color, background-color, box-shadow $animation-duration $animation-timing;
+    color:$title-text-color;
 }
 
 .filter__button:hover,
 .filter__button:focus{
-    background-color: var(--accent-color);
-    color: var(--main-white-color);
+    background-color: $accent-color;
+    color: $main-white-color;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter__button:active{
-    color: var(--main-white-color);
-    background-color: var(--accent-color)
+    color: $main-white-color;
+    background-color: $accent-color
 }
 
 /*проекты*/
@@ -629,7 +584,7 @@ p {
 }
 
 .card__link{
-    transition: box-shadow var(--animation-duration) var(--animation-timing);
+    transition: box-shadow $animation-duration $animation-timing;
 }
 
 .card__link:hover,
@@ -650,7 +605,7 @@ p {
 
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition: transform var(--animation-duration) var(--animation-timing);
+    transition: transform $animation-duration $animation-timing;
 }
 
 .card__img--overlay-text{
@@ -684,7 +639,7 @@ p {
     margin-bottom: 4px;
     
 
-    color: var(--title-text-color);
+    color: $title-text-color;
 }
 
 .card__item-text{
@@ -692,7 +647,7 @@ p {
     line-height: 1.88;
     letter-spacing: 0.03em;
 
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 
 /* модалка*/
@@ -720,7 +675,7 @@ p {
     width: 528px;
     height: 581px;
 
-    background-color: var(--main-white-color);
+    background-color: $main-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px;
@@ -744,8 +699,8 @@ p {
 
 .modal__close:hover,
 .modal__close:focus{
-    /*background-color: var(--accent-color);*/
-    color: var(--accent-color);
+    /*background-color: $accent-color;*/
+    color: $accent-color;
 }
 
 .modal__img{
@@ -763,7 +718,7 @@ p {
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 
-    color: var(--title-text-color);
+    color: $title-text-color;
 }
 
 .form{
@@ -778,7 +733,7 @@ p {
     letter-spacing: 0.01em;
     margin-bottom: 4px;
 
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 
 .form__field{
@@ -793,18 +748,18 @@ p {
     width: 100%;
     padding: 11px 12px;
     padding-left: 42px;
-    transition: border-color var(--animation-duration) var(--animation-timing);
+    transition: border-color $animation-duration $animation-timing;
 }
 .form__input:hover,
 .form__input:focus{
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+    border-color: $accent-color;
+    color: $accent-color;
     outline: none;
 }
 
 .form__input:hover + .form__img,
 .form__input:focus + .form__img{
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .form__img{
@@ -832,12 +787,12 @@ p {
     resize: none;
     outline: none;
     margin: 0;
-    transition: border-color var(--animation-duration) var(--animation-timing);
+    transition: border-color $animation-duration $animation-timing;
 }
 
 .form__textarea:focus,
 .form__textarea:hover{
-    border-color: var(--accent-color);
+    border-color: $accent-color;
 }
 
 .form__contract{
@@ -858,7 +813,7 @@ p {
     line-height: 1.71;
     letter-spacing: 0.03em;
 
-    color: var(--main-text-color);
+    color: $main-text-color;
 }
 .form__contract-link{
     font-size: 14px;
@@ -866,7 +821,7 @@ p {
     letter-spacing: 0.03em;
     margin-left: 3px;
 
-    color: var(--accent-color);
+    color: $accent-color;
     text-decoration-line: underline;
     text-decoration-skip-ink: none;
 }
@@ -880,17 +835,17 @@ p {
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    border: 1px solid var(--title-text-color);
+    border: 1px solid $title-text-color;
     border-radius: 2px;
-    transition: background-color var(--animation-duration) var(--animation-timing);
+    transition: background-color $animation-duration $animation-timing;
 }
 .form__contract input[type="checkbox"]:hover + label::before,
 .form__contract input[type="checkbox"]:focus + label::before{
-    border: 1px solid var(--accent-color);
+    border: 1px solid $accent-color;
 }
 
 .form__contract input[type="checkbox"]:checked + label::before{
-    background-color: var(--accent-color);
+    background-color: $accent-color;
     background-image: url(../img/icon\ check.svg);
     background-size: contain;
     background-origin: border-box;
@@ -907,9 +862,9 @@ p {
     text-align: center;
     letter-spacing: 0.06em;
     border: 0;
-    background-color: var(--accent-color);
+    background-color: $accent-color;
     margin: auto;
 
-    color:var(--main-white-color);
+    color:$main-white-color;
     cursor: pointer;
 }
