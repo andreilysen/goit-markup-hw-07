@@ -108,7 +108,7 @@
                     <ul class="work__list">
                         <li class="work__item">
                            <div class="work__list">
-                                <img class="work__img" src="./img/gadget.jpg" alt="Планшет с клавиатурой" width="370"/>
+                                <img class="img" src="./img/gadget.jpg" alt="Планшет с клавиатурой" width="370"/>
                                 <h3 class="work__text">Десктопные приложения</h3>
                            </div>
                         </li>
@@ -400,57 +400,57 @@
         </footer>
 
         <!--Модальное окно-->
-        <div class="backdrop is-hidden" data-modal>
+        <div class="backdrop backdrop__is-hidden" data-modal>
             <div class="modal">
-                <button class="button-modal" data-modal-close>
-                    <svg class="button-img">
+                <button class="modal__close" data-modal-close>
+                    <svg class="modal__img">
                         <use href="./img/symbol-defs.svg#icon-close"></use>
                     </svg>
                 </button>
                 <div>
-                    <h3 class="modal-title" >Оставьте свои данные, мы вам перезвоним</h3>
+                    <h3 class="modal__title" >Оставьте свои данные, мы вам перезвоним</h3>
                     <form action="">
-                        <label class="form-field">
-                            <span class="form-text">Имя</span> 
-                            <div class="field">
-                                <input type="text" name="name" class="modal-input">
-                                <svg class="form-img">
+                        <label class="form">
+                            <span class="form__text">Имя</span> 
+                            <div class="form__field">
+                                <input type="text" name="name" class="form__input">
+                                <svg class="form__img">
                                     <use href="./img/symbol-defs.svg#icon-person"></use>
                                 </svg>
                             </div>                            
                         </label>
-                        <label class="form-field">
-                            <span class="form-text">Телефон</span> 
-                            <div class="field">
-                                <input type="text" name="phone" class="modal-input">
-                                <svg class="form-img">
+                        <label class="form">
+                            <span class="form__text">Телефон</span> 
+                            <div class="form__field">
+                                <input type="text" name="phone" class="form__input">
+                                <svg class="form__img">
                                     <use href="./img/symbol-defs.svg#icon-phone"></use>
                                 </svg>
                             </div>                            
                         </label>
-                        <label class="form-field">
-                            <span class="form-text">Почта</span> 
-                            <div class="field">
-                                <input type="text" name="email" class="modal-input">
-                                <svg class="form-img">
+                        <label class="form">
+                            <span class="form__text">Почта</span> 
+                            <div class="form__field">
+                                <input type="text" name="email" class="form__input">
+                                <svg class="form__img">
                                     <use href="./img/symbol-defs.svg#icon-email-form"></use>
                                 </svg>
                             </div>                            
                         </label>
-                        <label for="" class="form-field comment">
-                            <span class="form-text">Комментарий</span>
-                            <textarea name="comment" id="" class="textarea form-text" placeholder="Введите текст"></textarea>                                                      
+                        <label for="" class="form form--comment">
+                            <span class="form__text">Комментарий</span>
+                            <textarea name="comment" id="" class="form__textarea form__text" placeholder="Введите текст"></textarea>                                                      
                         </label>
-                        <div class="contract">                            
-                            <input type="checkbox" name="agree" id="contract-check" class="old-checkbox">
+                        <div class="form__contract">                            
+                            <input type="checkbox" name="agree" id="contract-check" class="form__old-checkbox">
                             <label for="contract-check">
-                                <span class="contract-text">
+                                <span class="form__contract-text">
                                         Соглашаюсь с рассылкой и принимаю
                                 </span>                                                                                
                             </label>
-                            <a href="">Условия договора</a> 
+                            <a href="" class="form__contract-link">Условия договора</a> 
                         </div>
-                        <button type="submit" class="form-button">Отправить</button>                     
+                        <button type="submit" class="form__button">Отправить</button>                     
                     </form>
                 </div>
             </div>

@@ -60,6 +60,10 @@ p {
     padding-bottom: 50px;
 }
 
+.img{
+    display: block;
+}
+
 /* Навигация*/
 
 
@@ -284,9 +288,7 @@ p {
     position: relative;
 }
 
-.work__img{
-    display: block;
-}
+
 
 .work__text{
     font-weight: 700;
@@ -561,23 +563,23 @@ p {
 
 /*кнопки*/
 
-.project-filter {
+.project {
     padding-top: 100px;
     padding-bottom: 94px;
  }
    
- .filter-list {
+ .filter {
      display: flex;
      justify-content: center;
      margin-bottom: 50px;
  }
  
- .filter-item:not(:last-child) {
+ .filter__item:not(:last-child) {
      margin-right: 8px;
  }
  
 
-.filter-button{
+.filter__button{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
@@ -593,56 +595,53 @@ p {
     color:var(--title-text-color);
 }
 
-.filter-button:hover,
-.filter-button:focus{
+.filter__button:hover,
+.filter__button:focus{
     background-color: var(--accent-color);
     color: var(--main-white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter-button:active{
+.filter__button:active{
     color: var(--main-white-color);
+    background-color: var(--accent-color)
 }
 
 /*проекты*/
 
-.project-list {
+.card__list {
     display: flex;
     flex-wrap: wrap;  
 }
 
 
-.project-item {
+.card__item {
     margin-right: 30px;
     margin-bottom: 30px;  
 }
 
-.project-item > a {
-    display: block;
-}
-
-.project-item:nth-child(3n) {
+.card__item:nth-child(3n) {
     margin-right: 0;
 }
 
-.project-item:nth-last-child(-n+3) {
+.card__item:nth-last-child(-n+3) {
     margin-bottom: 0;
 }
 
-.project-link{
+.card__link{
     transition: box-shadow var(--animation-duration) var(--animation-timing);
 }
 
-.project-link:hover,
-.project-link:focus {
+.card__link:hover,
+.card__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);   
 }
-.project-img{
+.card__img{
     position: relative;
     overflow: hidden;
 }
 
-.project-img .overlay{
+.card__img--overlay{
     position: absolute;
     left: 0;
     top: 0;
@@ -654,7 +653,7 @@ p {
     transition: transform var(--animation-duration) var(--animation-timing);
 }
 
-.overlay-text{
+.card__img--overlay-text{
     padding: 63px 24px;
     font-size: 18px;
     line-height: 1.56;
@@ -662,12 +661,12 @@ p {
     color: #FFFFFF;
 }
 
-.project-link:hover .overlay,
-.project-link:focus .overlay{
+.card__link:hover .card__img--overlay,
+.card__link:focus .card__img--overlay{
     transform: translateY(0);
 }
 
-.project-title{
+.card__title{
     border-right: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
@@ -677,7 +676,7 @@ p {
     padding-bottom: 20px;
 }
 
-.project-item-title{
+.card__item-title{
     font-weight: 700;
     font-size: 18px;
     line-height: 2.00;
@@ -688,7 +687,7 @@ p {
     color: var(--title-text-color);
 }
 
-.project-item-text{
+.card__item-text{
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
@@ -707,7 +706,7 @@ p {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden{
+.backdrop__is-hidden{
     opacity: 0;
     pointer-events: none;
 }
@@ -727,7 +726,7 @@ p {
     padding: 40px;
 }
 
-.button-modal{
+.modal__close{
     position: absolute;
     
     top: 8px;
@@ -743,20 +742,20 @@ p {
     color: #000000;
 }
 
-.button-modal:hover,
-.button-modal:focus{
+.modal__close:hover,
+.modal__close:focus{
     /*background-color: var(--accent-color);*/
     color: var(--accent-color);
 }
 
-.button-img{
+.modal__img{
     width: 30px;
     height: 30px;
 
     fill: currentColor;
 }
 
-.modal-title{
+.modal__title{
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
@@ -767,13 +766,13 @@ p {
     color: var(--title-text-color);
 }
 
-.form-field{
+.form{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.form-text{
+.form__text{
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -782,12 +781,12 @@ p {
     color: var(--main-text-color);
 }
 
-.field{
+.form__field{
     position: relative;
     border-radius: 4px;
 }
 
-.modal-input{
+.form__input{
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
@@ -796,19 +795,19 @@ p {
     padding-left: 42px;
     transition: border-color var(--animation-duration) var(--animation-timing);
 }
-.modal-input:hover,
-.modal-input:focus{
+.form__input:hover,
+.form__input:focus{
     border-color: var(--accent-color);
     color: var(--accent-color);
     outline: none;
 }
 
-.modal-input:hover + .form-img,
-.modal-input:focus + .form-img{
+.form__input:hover + .form__img,
+.form__input:focus + .form__img{
     color: var(--accent-color);
 }
 
-.form-img{
+.form__img{
     position: absolute;
     top: 50%;
     left: 12px;
@@ -819,11 +818,11 @@ p {
     fill: currentColor;
 }
 
-.comment{
+.form--comment{
     margin-bottom: 20px;
 }
 
-.textarea{
+.form__textarea{
     width: 100%;
     height: 120px;
     padding: 12px 16px;
@@ -836,32 +835,32 @@ p {
     transition: border-color var(--animation-duration) var(--animation-timing);
 }
 
-.textarea:focus,
-.textarea:hover{
+.form__textarea:focus,
+.form__textarea:hover{
     border-color: var(--accent-color);
 }
 
-.contract{
+.form__contract{
     position: relative;
    display: flex;
    justify-content: center;
    margin-bottom: 30px;
 }
 
-.old-checkbox{
+.form__old-checkbox{
     margin-right: 7px;
 
     opacity: 0;
 }
 
-.contract-text{
+.form__contract-text{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 
     color: var(--main-text-color);
 }
-.contract > a{
+.form__contract-link{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -872,7 +871,7 @@ p {
     text-decoration-skip-ink: none;
 }
 
-.contract label::before{
+.form__contract label::before{
     position: absolute;
     display: inline-flex;
     content: "";
@@ -885,12 +884,12 @@ p {
     border-radius: 2px;
     transition: background-color var(--animation-duration) var(--animation-timing);
 }
-.contract input[type="checkbox"]:hover + label::before,
-.contract input[type="checkbox"]:focus + label::before{
+.form__contract input[type="checkbox"]:hover + label::before,
+.form__contract input[type="checkbox"]:focus + label::before{
     border: 1px solid var(--accent-color);
 }
 
-.contract input[type="checkbox"]:checked + label::before{
+.form__contract input[type="checkbox"]:checked + label::before{
     background-color: var(--accent-color);
     background-image: url(../img/icon\ check.svg);
     background-size: contain;
@@ -898,7 +897,7 @@ p {
     border-color: transparent;
 }
 
-.form-button{
+.form__button{
     padding: 10px 56px;
     font-weight: 700;
     font-size: 16px;
@@ -912,4 +911,5 @@ p {
     margin: auto;
 
     color:var(--main-white-color);
+    cursor: pointer;
 }
