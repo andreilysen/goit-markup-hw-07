@@ -1,3 +1,48 @@
+:root {
+    --title-text-color: #212121;
+    --main-text-color: #757575;
+    --accent-color:  #2196F3;
+    --main-white-color: #FFFFFF;
+    --address-color: #2F303A;
+    --background-icon: #F5F4FA;
+    --color-icon: #AFB1B8;
+    --animation-duration: 250ms;
+    --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: Roboto, sans-serif;
+
+    background-color: var(--main-white-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -10,13 +55,9 @@
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: $title-text-color;
+    color: var(--title-text-color);
 
     padding-bottom: 50px;
-}
-
-.img{
-    display: block;
 }
 
 /* Навигация*/
@@ -40,7 +81,7 @@
     font-family: Raleway, sans-serif;
     font-size: 26px;
     line-height: 1.19;
-    color: $title-text-color;
+    color: var(--title-text-color);
     width: 145px;
     height: 31px;
 
@@ -49,7 +90,7 @@
 }
 
 .logo__text {
-    color: $accent-color;
+    color: var(--accent-color);
 }
 
 .header__portfolio {
@@ -76,20 +117,20 @@
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
-    transition: color $animation-duration $animation-timing;
+    transition: color var(--animation-duration) var(--animation-timing);
 
-    color: $title-text-color;
+    color: var(--title-text-color);
 
 }
 
 .header__page:hover,
 .header__page:focus {
-    color: $accent-color;
+    color: var(--accent-color);
     
 }
 
 .header__page--active{
-    color: $accent-color;
+    color: var(--accent-color);
 }
 
 .header__page--active::after{
@@ -101,7 +142,7 @@
     border-radius: 2px;
     bottom: -0.5px;
 
-    background-color: $accent-color;
+    background-color: var(--accent-color);
 }
 
 .header__page--contact {
@@ -109,7 +150,7 @@
     align-items: center;
     padding: 0;
 
-    color: $main-text-color;
+    color: var(--main-text-color);
 }
 
 .header__icon{
@@ -146,7 +187,7 @@
     margin: 0 auto;
     text-transform: uppercase;
     
-    color: $main-white-color;
+    color: var(--main-white-color);
 }
 
 .hero__button{
@@ -160,7 +201,7 @@
     border: 0;
     cursor: pointer;
 
-    color: $main-white-color;
+    color: var(--main-white-color);
 }
 
 /* особенности */
@@ -195,7 +236,7 @@
     justify-content: center;
     align-items: center;
     height: 120px;
-    background-color: $background-icon;
+    background-color: var(--background-icon);
     margin-bottom: 30px;
     border-radius: 4px;    
 }
@@ -208,7 +249,7 @@
     text-transform: uppercase;
     padding-bottom: 10px;
 
-    color: $title-text-color;
+    color: var(--title-text-color);
     
 }
 
@@ -217,7 +258,7 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
 
-    color: $main-text-color;
+    color: var(--main-text-color);
 }
 
 .icon{
@@ -243,7 +284,9 @@
     position: relative;
 }
 
-
+.work__img{
+    display: block;
+}
 
 .work__text{
     font-weight: 700;
@@ -256,7 +299,7 @@
     margin: 0;
     width: 370px;
     
-    color: $main-white-color;
+    color: var(--main-white-color);
     background: rgba(47, 48, 58, 0.8);
 
     position: absolute;
@@ -277,7 +320,7 @@
 }
 
 .team__item {
-    background-color: $main-white-color;
+    background-color: var(--main-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -296,7 +339,7 @@
     padding-top: 30px;
     padding-bottom: 10px;
 
-    color: $title-text-color;
+    color: var(--title-text-color);
 }
 
 .team__item-text{
@@ -305,7 +348,7 @@
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: $main-text-color;
+    color: var(--main-text-color);
 }
 
 /* соц. сети*/
@@ -329,19 +372,19 @@
 .social__link{
     padding: 12px;
     border-radius: 50px;
-    color: $color-icon;
-    transition-property: color, background-color $animation-duration $animation-timing;
+    color: var(--color-icon);
+    transition-property: color, background-color var(--animation-duration) var(--animation-timing);
 }
 
 .social__link:hover,
 .social__link:focus {
-    color: $main-white-color;
-    background-color: $accent-color;
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
     
 }
 
 .social__footer-link{
-    color: $main-white-color;
+    color: var(--main-white-color);
 }
 
 .social__img{
@@ -368,18 +411,18 @@
 }
 
 .client__link{
-    border: 1px solid $color-icon;
-    color: $color-icon;
+    border: 1px solid var(--color-icon);
+    color: var(--color-icon);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-property: color, border-color $animation-duration $animation-timing;
+    transition-property: color, border-color var(--animation-duration) var(--animation-timing);
 }
 
 .client__link:hover,
 .client__link:focus {
-    color: $accent-color;
-    border-color: $accent-color;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 .client__icon{
@@ -415,7 +458,7 @@
 /* адресс */
 
 .footer{
-    background-color: $address-color;
+    background-color: var(--address-color);
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -426,7 +469,7 @@
 }
 
 .logo__footer-logo{
-    color: $main-white-color;
+    color: var(--main-white-color);
     margin: 0;
 }
 
@@ -437,7 +480,7 @@
     letter-spacing: 0.03em;
     padding-top: 20px;
 
-    color: $main-white-color;
+    color: var(--main-white-color);
 }
 
 .footer__address-contact{
@@ -466,7 +509,7 @@
     text-transform: uppercase;
     margin-bottom: 20px;
 
-    color: $main-white-color;
+    color: var(--main-white-color);
 }
 
 .footer__sub{
@@ -488,7 +531,7 @@
 
 .footer__button{
     width: 200px;
-    background-color: $accent-color;
+    background-color: var(--accent-color);
     border: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -505,7 +548,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    color: $main-white-color;
+    color: var(--main-white-color);
 }
 
 .footer__send-icon{
@@ -518,23 +561,23 @@
 
 /*кнопки*/
 
-.project {
+.project-filter {
     padding-top: 100px;
     padding-bottom: 94px;
  }
    
- .filter {
+ .filter-list {
      display: flex;
      justify-content: center;
      margin-bottom: 50px;
  }
  
- .filter__item:not(:last-child) {
+ .filter-item:not(:last-child) {
      margin-right: 8px;
  }
  
 
-.filter__button{
+.filter-button{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
@@ -546,57 +589,60 @@
     border: 0;
     border-radius: 4px;
     padding: 6px 22px;
-    transition: color, background-color, box-shadow $animation-duration $animation-timing;
-    color:$title-text-color;
+    transition: color, background-color, box-shadow var(--animation-duration) var(--animation-timing);
+    color:var(--title-text-color);
 }
 
-.filter__button:hover,
-.filter__button:focus{
-    background-color: $accent-color;
-    color: $main-white-color;
+.filter-button:hover,
+.filter-button:focus{
+    background-color: var(--accent-color);
+    color: var(--main-white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter__button:active{
-    color: $main-white-color;
-    background-color: $accent-color
+.filter-button:active{
+    color: var(--main-white-color);
 }
 
 /*проекты*/
 
-.card__list {
+.project-list {
     display: flex;
     flex-wrap: wrap;  
 }
 
 
-.card__item {
+.project-item {
     margin-right: 30px;
     margin-bottom: 30px;  
 }
 
-.card__item:nth-child(3n) {
+.project-item > a {
+    display: block;
+}
+
+.project-item:nth-child(3n) {
     margin-right: 0;
 }
 
-.card__item:nth-last-child(-n+3) {
+.project-item:nth-last-child(-n+3) {
     margin-bottom: 0;
 }
 
-.card__link{
-    transition: box-shadow $animation-duration $animation-timing;
+.project-link{
+    transition: box-shadow var(--animation-duration) var(--animation-timing);
 }
 
-.card__link:hover,
-.card__link:focus {
+.project-link:hover,
+.project-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);   
 }
-.card__img{
+.project-img{
     position: relative;
     overflow: hidden;
 }
 
-.card__img--overlay{
+.project-img .overlay{
     position: absolute;
     left: 0;
     top: 0;
@@ -605,10 +651,10 @@
 
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition: transform $animation-duration $animation-timing;
+    transition: transform var(--animation-duration) var(--animation-timing);
 }
 
-.card__img--overlay-text{
+.overlay-text{
     padding: 63px 24px;
     font-size: 18px;
     line-height: 1.56;
@@ -616,12 +662,12 @@
     color: #FFFFFF;
 }
 
-.card__link:hover .card__img--overlay,
-.card__link:focus .card__img--overlay{
+.project-link:hover .overlay,
+.project-link:focus .overlay{
     transform: translateY(0);
 }
 
-.card__title{
+.project-title{
     border-right: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
@@ -631,7 +677,7 @@
     padding-bottom: 20px;
 }
 
-.card__item-title{
+.project-item-title{
     font-weight: 700;
     font-size: 18px;
     line-height: 2.00;
@@ -639,15 +685,15 @@
     margin-bottom: 4px;
     
 
-    color: $title-text-color;
+    color: var(--title-text-color);
 }
 
-.card__item-text{
+.project-item-text{
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
 
-    color: $main-text-color;
+    color: var(--main-text-color);
 }
 
 /* модалка*/
@@ -661,7 +707,7 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop__is-hidden{
+.backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
 }
@@ -675,13 +721,13 @@
     width: 528px;
     height: 581px;
 
-    background-color: $main-white-color;
+    background-color: var(--main-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px;
 }
 
-.modal__close{
+.button-modal{
     position: absolute;
     
     top: 8px;
@@ -697,20 +743,20 @@
     color: #000000;
 }
 
-.modal__close:hover,
-.modal__close:focus{
-    /*background-color: $accent-color;*/
-    color: $accent-color;
+.button-modal:hover,
+.button-modal:focus{
+    /*background-color: var(--accent-color);*/
+    color: var(--accent-color);
 }
 
-.modal__img{
+.button-img{
     width: 30px;
     height: 30px;
 
     fill: currentColor;
 }
 
-.modal__title{
+.modal-title{
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
@@ -718,51 +764,51 @@
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 
-    color: $title-text-color;
+    color: var(--title-text-color);
 }
 
-.form{
+.form-field{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.form__text{
+.form-text{
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     margin-bottom: 4px;
 
-    color: $main-text-color;
+    color: var(--main-text-color);
 }
 
-.form__field{
+.field{
     position: relative;
     border-radius: 4px;
 }
 
-.form__input{
+.modal-input{
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     width: 100%;
     padding: 11px 12px;
     padding-left: 42px;
-    transition: border-color $animation-duration $animation-timing;
+    transition: border-color var(--animation-duration) var(--animation-timing);
 }
-.form__input:hover,
-.form__input:focus{
-    border-color: $accent-color;
-    color: $accent-color;
+.modal-input:hover,
+.modal-input:focus{
+    border-color: var(--accent-color);
+    color: var(--accent-color);
     outline: none;
 }
 
-.form__input:hover + .form__img,
-.form__input:focus + .form__img{
-    color: $accent-color;
+.modal-input:hover + .form-img,
+.modal-input:focus + .form-img{
+    color: var(--accent-color);
 }
 
-.form__img{
+.form-img{
     position: absolute;
     top: 50%;
     left: 12px;
@@ -773,11 +819,11 @@
     fill: currentColor;
 }
 
-.form--comment{
+.comment{
     margin-bottom: 20px;
 }
 
-.form__textarea{
+.textarea{
     width: 100%;
     height: 120px;
     padding: 12px 16px;
@@ -787,46 +833,46 @@
     resize: none;
     outline: none;
     margin: 0;
-    transition: border-color $animation-duration $animation-timing;
+    transition: border-color var(--animation-duration) var(--animation-timing);
 }
 
-.form__textarea:focus,
-.form__textarea:hover{
-    border-color: $accent-color;
+.textarea:focus,
+.textarea:hover{
+    border-color: var(--accent-color);
 }
 
-.form__contract{
+.contract{
     position: relative;
    display: flex;
    justify-content: center;
    margin-bottom: 30px;
 }
 
-.form__old-checkbox{
+.old-checkbox{
     margin-right: 7px;
 
     opacity: 0;
 }
 
-.form__contract-text{
+.contract-text{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 
-    color: $main-text-color;
+    color: var(--main-text-color);
 }
-.form__contract-link{
+.contract > a{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     margin-left: 3px;
 
-    color: $accent-color;
+    color: var(--accent-color);
     text-decoration-line: underline;
     text-decoration-skip-ink: none;
 }
 
-.form__contract label::before{
+.contract label::before{
     position: absolute;
     display: inline-flex;
     content: "";
@@ -835,24 +881,24 @@
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    border: 1px solid $title-text-color;
+    border: 1px solid var(--title-text-color);
     border-radius: 2px;
-    transition: background-color $animation-duration $animation-timing;
+    transition: background-color var(--animation-duration) var(--animation-timing);
 }
-.form__contract input[type="checkbox"]:hover + label::before,
-.form__contract input[type="checkbox"]:focus + label::before{
-    border: 1px solid $accent-color;
+.contract input[type="checkbox"]:hover + label::before,
+.contract input[type="checkbox"]:focus + label::before{
+    border: 1px solid var(--accent-color);
 }
 
-.form__contract input[type="checkbox"]:checked + label::before{
-    background-color: $accent-color;
+.contract input[type="checkbox"]:checked + label::before{
+    background-color: var(--accent-color);
     background-image: url(../img/icon\ check.svg);
     background-size: contain;
     background-origin: border-box;
     border-color: transparent;
 }
 
-.form__button{
+.form-button{
     padding: 10px 56px;
     font-weight: 700;
     font-size: 16px;
@@ -862,9 +908,8 @@
     text-align: center;
     letter-spacing: 0.06em;
     border: 0;
-    background-color: $accent-color;
+    background-color: var(--accent-color);
     margin: auto;
 
-    color:$main-white-color;
-    cursor: pointer;
+    color:var(--main-white-color);
 }

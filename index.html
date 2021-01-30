@@ -61,7 +61,7 @@
                     <ul class="features__list">
                         <li class="features__item">
                             <div class="features__icon">
-                                <svg class="icon">
+                                <svg class="features__icon-size">
                                     <use href="./img/symbol-defs.svg#icon-antenna"></use>
                                 </svg>
                             </div>
@@ -70,7 +70,7 @@
                         </li>
                         <li class="features__item">
                             <div class="features__icon">
-                                <svg class="icon">
+                                <svg class="features__icon-size">
                                     <use href="./img/symbol-defs.svg#icon-clock"></use>
                                 </svg>
                             </div>
@@ -79,7 +79,7 @@
                         </li>
                         <li class="features__item">
                             <div class="features__icon">
-                                <svg class="icon">
+                                <svg class="features__icon-size">
                                     <use href="./img/symbol-defs.svg#icon-diagram"></use>
                                 </svg>
                             </div>
@@ -88,7 +88,7 @@
                         </li>
                         <li class="features__item">
                             <div class="features__icon">
-                                <svg class="icon">
+                                <svg class="features__icon-size">
                                     <use href="./img/symbol-defs.svg#icon-astronaut"></use>
                                 </svg>
                             </div>
@@ -439,14 +439,14 @@
                             <span class="form__text">Комментарий</span>
                             <textarea name="comment" id="" class="form__textarea form__text" placeholder="Введите текст"></textarea>                                                      
                         </label>
-                        <div class="form__contract">                            
-                            <input type="checkbox" name="agree" id="contract-check" class="form__old-checkbox">
-                            <label for="contract-check">
-                                <span class="form__contract-text">
+                        <div class="agree">                            
+                            <input type="checkbox" name="agree" id="check" class="agree__old-checkbox">
+                            <label for="check">
+                                <span class="agree__text">
                                         Соглашаюсь с рассылкой и принимаю
                                 </span>                                                                                
                             </label>
-                            <a href="" class="form__contract-link">Условия договора</a> 
+                            <a href="" class="agree__link">Условия договора</a> 
                         </div>
                         <button type="submit" class="form__button">Отправить</button>                     
                     </form>
