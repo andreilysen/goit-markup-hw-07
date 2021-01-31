@@ -18,7 +18,7 @@
         padding: 12px;
         border-radius: 50px;
         color: $color-icon;
-        transition-property: color, background-color $animation-duration $animation-timing;
+        transition: color, background-color $animation-duration $animation-timing;
     }
     
     &__link:hover,

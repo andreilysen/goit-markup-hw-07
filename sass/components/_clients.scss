@@ -19,7 +19,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition-property: color, border-color $animation-duration $animation-timing;
+        transition: color, border-color $animation-duration $animation-timing;
     }
     
     &__link:hover,
